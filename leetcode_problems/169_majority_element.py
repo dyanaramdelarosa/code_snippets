@@ -7,7 +7,7 @@ from collections import Counter
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         # using built-in python
-        return Counter(nums).most_common()[0][0]
+        # return Counter(nums).most_common()[0][0]
 
         # using hashmap
         # most_common_item = occurrence = 0
@@ -20,4 +20,16 @@ class Solution:
         #         occurrence = histogram[num]
         # return most_common_item
         
-        # using a majority 
+        # using a majority
+        most_common_item = majority_counter = 0
+
+        for num in nums:
+            if majority_counter == 0:
+                most_common_item = num
+            
+            if most_common_item != num:
+                majority_counter -= 1
+            else:
+                majority_counter += 1
+
+        return most_common_item
