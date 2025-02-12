@@ -1,6 +1,6 @@
 # Problem Link: https://leetcode.com/problems/single-number/
 # Author: Dyanara Dela Rosa
-# Date: August 14, 2024
+# Date: Feb 12, 2024
 
 
 class Solution:
