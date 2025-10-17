@@ -1,0 +1,7 @@
+-- Problem Link: https://leetcode.com/problems/duplicate-emails/description/
+-- Author: Dyanara Dela Rosa
+-- Date: October 17, 2025
+
+
+-- Write your PostgreSQL query statement below
+select distinct email from Person group by email having count(email) > 1
